@@ -1,38 +1,53 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --input-bg: #f0f0f0;
+  --input-border: #ccc;
+  --link-color: #007bff;
+
+}
+
+[data-theme='dark'] {
+  --bg-color: #1d1d1d;
+  /* Dark background */
+  --text-color: #ffffff;
+  /* Light text */
+  --input-bg: #333;
+  /* Darker input background */
+  --input-border: #444;
+  /* Darker input border */
+  --link-color: #1e90ff;
+  /* Bright link color */
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1,
+h2,
+h3 {
+  color: var(--text-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-color);
 }
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Additional styling as needed for other elements */
